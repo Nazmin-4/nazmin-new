@@ -1,0 +1,227 @@
+.glow-on-hover {
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg,#07546d, #4c4ec7, #e3e278, #35a20a, #09957d, #4b67f5, #00a6ff, #70ddaa, #72eef0);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .10s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+.slideshow-container {
+  max-width: 1000px;
+  position: fill;
+  margin: fill;
+  border-radius: 50%;
+  /* padding-top: 30px; */
+  padding-left:5px;
+}
+
+.mySlides {
+  display: none;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+body{
+  background-color: skyblue;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+.fade {
+  animation-name:mymove;
+  animation-duration: 2.5s;
+}
+
+@keyframes mymove {
+ from {left: 0px;}
+ to {left: 200px;}
+}
+h1{
+
+    text-align:center;
+    font-family: papyrus;
+
+  }
+
+.text-container p:nth-child(1) {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  color: #535151;
+  font-size: 35px;
+  padding-top: 9%;
+}
+
+ .text-container p:nth-child(2) {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: #1a1a1a;
+  font-size: 60px;
+   /* padding-left: 95%;  */
+ }
+
+.text-container p:nth-child(3) {
+  font-family: myriad pro regular;
+  color: #332a2a;
+  font-size: 40px;
+  /* padding-left: 95%; */
+}
+
+.text-container p {
+  line-height: 50px;
+  margin: 45px 0px 25px;
+}
+
+.text-container {
+  position: absolute;
+  left: 13%;
+  top: 42%;
+  padding-left: 80%;
+  transform: translate(-13%, -42%);
+}
+
+.text-container button {
+  width: 130px;
+  height: 42px;
+  border-radius: 10px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  outline: navajowhite;
+  margin: 0px 10px;
+}
+
+.button {
+  border-radius: 4px;
+  background-color: #0b0b0b;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+button:active {
+  transform: scale(1.1);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  padding-top: 30px;
+  width: 100%;
+  height: 95vh;
+  /* background-image:url("https://img.freepik.com/free-vector/white-abstract-background_23-2148812993.jpg?w=2000");
+  background-repeat: no-repeat;
+  background-size: cover; */
+  position: relative;
+  background-color:skyblue;
+}

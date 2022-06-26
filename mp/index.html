@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equi="X-UA-Compatible" content="IE-edge">
+  <meta name="viewport" content="'width=device-width, initial-scale=1.0">
+  <title>first page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  <link rel="stylesheet" href="o.css">
+  <link rel="stylesheet" href="h2.css">
+  <link rel="stylesheet" href="page2.css">
+</head>
+
+<body>
+  <header>
+    <a href="#" class="brand">#House of hope</a>
+    <div class="menu-btn"></div>
+    <div class="navigation">
+      <div class="navigation-items">
+        <a href="#h">Home>></a>
+        <a href="#ab">About</a>
+        <a href="#">Team</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="slideshow-container" id="h">
+      <div class="text-container">
+        <p>Let's</p>
+        <p>Build The Better World</p>
+        <p>Together</p>
+        <button class="glow-on-hover" id="r1" type="button">LOGIN</button>
+        <button class="glow-on-hover" id="r2" type="button">SIGNUP</button>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="p3.jpg" height=600 style="width:100%">
+
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="p2.jpg" height=600 style="width:100%">
+
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="p1.jpg" height=600 style="width:100%">
+      </div>
+      <br>
+  </section>
+  <section id="sec2">
+    <p class="heading">STEPS TO HELP</p>
+    <div class="Cer" id="d">
+      <div class="box-container1">
+        <div class="box-container" id="ab">
+
+          <div class="container">
+
+            <img src="icon.jpeg" height=100 width=100 class="profilepic" />
+            <h2 class="title">select area</h2>
+
+            <form id="form1">
+              <select name="dropdown" style="width: 120px">
+                <option value="Location" selected>Location</option>
+                <option value="RTC Complex">RTC Complex</option>
+                <option value="Maddilapalem">Maddilapalem</option>
+                <option value="Gajuwaka">Gajuwaka</option>
+                <option value="Steel Plant">Steel Plant</option>
+                <option value="Kurmannapalem">Kurmanpalem</option>
+              </select>
+            </form>
+            <em class="desg"> select an area near you !</em>
+            <h2 class="title"></h2>
+          </div>
+          <div class="container 2">
+            <img src="camera.jpeg" height=100 width=100 class="camerapic" />
+            <h2>upload picture</h2>
+            <label><i class="fa fa-plus"></i></label>
+            <input type="file" id="image" name="image" accept="image/png, image/jpeg">
+            <p>
+              <em class="des"> Upload picture from your gallery </em>
+          </div>
+          <div class="container 3">
+            <img src="description.jpeg" height=100 width=100 class="descriptionpic" />
+            <h2>Describe </h2>
+            <form action="mailto:gmail@20l31a05m8.com" method="post" enctype=" text/plain ">
+              <input type="<textarea name=" name" rows="400" cols="400"></textarea>
+              <input type="submit" name="" value="submit"><br />
+
+              <em clas="abc">Describe the Situation</em>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!--<p>nazmin</p> -->
+  </section>
+</body>
+<script type="text/javascript">
+
+  let slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1 }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 2500); // Change image every 2 seconds
+  }
+  document.getElementById("r1").onclick = function () {
+    location.href = "i.html";
+  };
+  document.getElementById("r2").onclick = function () {
+    location.href = "sign.html";
+  };
+</script>
+
+</html>
